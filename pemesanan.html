@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan via Chat - Typo.Fakes Photocard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <header>
+    Pemesanan via Chat - Typo.Fakes Photocard
+  </header> 
+  
+  <div class="content">
+    <div class="order-info">
+      Untuk memesan photocard pilihan Anda, silakan tekan tombol di bawah untuk menghubungi kami langsung melalui WhatsApp. Anda dapat menanyakan detail produk, harga, atau mengonfirmasi pesanan Anda.
+    </div>
+
+    <!-- Tombol Pesan via WhatsApp yang sekarang menggunakan tag <a> -->
+    <a href="https://api.whatsapp.com/send?phone=6283825971562" class="order-button" target="_blank">Pesan via WhatsApp</a>
+
+    <br><br>
+    <button onclick="goToCatalog()" class="back-button">Kembali ke Katalog</button>
+  </div>
+
+  <script>
+      function goToCatalog() {
+          window.location.href = "weebtalog.html"; // Ganti "Webtalog.html" dengan nama file katalog Anda
+      }
+  </script>
+
+</body>
+</html>

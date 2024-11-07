@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typo.Fakes Photocard</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+       function searchPhotocard() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const cards = Array.from(document.querySelectorAll('.product-card'));
+
+    // Filter dan urutkan kartu berdasarkan nama produk
+    const filteredCards = cards.filter(card => {
+        const name = card.querySelector('.product-name').textContent.toLowerCase();
+        return name.includes(input);  // Memastikan hanya kartu yang sesuai yang ditampilkan
+    });
+
+    // Urutkan berdasarkan nama produk (A-Z)
+    filteredCards.sort((a, b) => {
+        const nameA = a.querySelector('.product-name').textContent.toLowerCase();
+        const nameB = b.querySelector('.product-name').textContent.toLowerCase();
+        return nameA.localeCompare(nameB);  // Mengurutkan secara abjad (A-Z)
+    });
+
+    // Sembunyikan semua kartu terlebih dahulu
+    cards.forEach(card => {
+        card.style.display = 'none';
+    });
+
+    // Tampilkan kartu yang telah difilter dan diurutkan
+    filteredCards.forEach(card => {
+        card.style.display = '';  // Menampilkan kartu yang sesuai
+    });
+}
+
+
+        function goToHome() {
+            alert('Navigasi ke Home');
+        }
+        function goToHome() {
+            window.location.href = "home.html";
+        }
+
+        function goToHistory() {
+            alert('Navigasi ke Riwayat');
+        }
+        function goToHistory() {
+    window.location.href = "history.html";
+}
+        function orderViaWA() {
+    window.location.href = "pemesanan.html";
+}
+    </script>
+</head>
+<body>
+  
+  <header>
+    Typo.Fakes Photocard
+  </header> 
+  
+  <div class="dashboard">
+      <button onclick="goToHome()">Home</button>
+      <button onclick="goToHistory()">Riwayat</button>
+      <button onclick="orderViaWA()">Pemesanan via WA</button>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" class="search-input" placeholder="Carilah..." onkeyup="searchPhotocard()">
+  </div>
+
+  <div class="container"> 
+   <div class="product-card"> 
+    <img src="amuu.jpg" alt="Photocard Amu"> 
+    <div class="product-name">Amu</div> 
+    <div class="product-description">
+     Amu biasanya digambarkan sebagai karakter yang ceria, penuh semangat, dan sedikit pemberontak. Dia berusaha menemukan jati dirinya sambil menghadapi berbagai tantangan emosional dan sosial. Meskipun tampak percaya diri, Amu sebenarnya memiliki sisi sensitif dan peduli, terutama terhadap teman-temannya. Kombinasi kepribadian yang kuat dan lembut ini membuatnya menjadi karakter yang mudah diingat dan disukai.
+    </div> 
+   </div> 
+   
+   <div class="product-card"> 
+    <img src="momo.jpg" alt="Photocard Ayase"> 
+    <div class="product-name">Ayase Momo</div> 
+    <div class="product-description">
+      Ayase Momo dari Dandadan adalah karakter berani dan tegas yang menghadapi dunia paranormal penuh misteri. Dengan kekuatan spiritualnya, ia bertarung melawan makhluk gaib bersama temannya, Okarun, menunjukkan ketangguhan dan empati yang mendalam.
+    </div> 
+   </div> 
+   
+
+   <div class="product-card"> 
+    <img src="kugisakinobara.jpg" alt="Photocard kugisaki Nobara"> 
+    <div class="product-name">kugisaki Nobara</div> 
+    <div class="product-description">
+   Kugisaki Nobara adalah karakter utama dalam Jujutsu Kaisen yang kuat dan percaya diri. Dia adalah penyihir jujutsu dari pedesaan Jepang yang menggunakan teknik unik dengan boneka dan paku. Nobara memiliki hubungan erat dengan teman-teman sekelasnya, Yuji Itadori dan Megumi Fushiguro, serta menunjukkan perkembangan yang signifikan dalam keterampilan dan kepribadiannya saat melawan kutukan.
+    </div> 
+   </div> 
+   
+   <div class="product-card"> 
+    <img src="frierenn.jpg" alt="Photocard Frieren"> 
+    <div class="product-name">Frieren</div> 
+    <div class="product-description">
+      Rambut Putih dengan bola mata berwarna hijau melambangkan keindahan hakiki. Meski terlihat dingin, Frieren memiliki hati yang lembut dan perlahan belajar memahami hubungan dengan orang lain, terutama manusia yang usianya jauh lebih pendek darinya.
+    </div> 
+   </div> 
+  </div> 
+</body>
+</html>
